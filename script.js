@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (activityEl) activityEl.style.display = 'none';
 
                 if (albumArt) albumArt.src = data.spotify.album_art_url;
-                if (songName) songName.innerText = data.spotify.track;
+                if (songName) songName.innerText = data.spotify.song;
                 if (artistName) artistName.innerText = data.spotify.artist;
 
             } else {
