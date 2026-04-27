@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pauseframe</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="vertical-stack">
+
+        <div class="main-card">
+            <div class="pfp-circle">
+                <img src="nigga.gif" alt="pfp">
+            </div>
+
+            <h1>frame</h1>
+            <p>i dont want to be ur friend</p>
+            <p>i like to do things and have fun, dont click around...</p>
+            
+            <div class="links">
+                <a href="https://github.com/pauseframe">GITHUB</a>
+                <a href="https://discord.gg/QBKxnsr8gY">DISCORD</a>
+                <a href="https://anilist.co/user/pauseframe/">ANILIST</a>
+                <a href="https://x.com/pauseframes">X</a>
+            </div>
+        </div> 
+
+        <div id="discord-status">
+            <div class="status-header">
+                <span id="status-dot"></span>
+                <span id="status-text">CONNECTING...</span>
+            </div>
+
+            <div id="activity-detail">FETCHING DATA...</div>
+
+            <div id="spotify-container" style="display: none;">
+                <img id="album-art" src="" alt="Album Art">
+                <div id="music-info">
+                    <div id="song-name">Song Title</div>
+                    <div id="artist-name">Artist Name</div>
+                    <div class="visualizer">
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                        <div class="bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <button id="cat-summoner">click if lonely</button>
+
+    </div> 
+
+    <img src="bunny.gif" id="cursor-cat" style="display: none; position: fixed; pointer-events: none; z-index: 9999; width: 50px;">
+    <img src="floating.gif" id="toggle-trigger" class="floating-corner">
+
+    <script src="script.js"></script>
+</body>
+</html>

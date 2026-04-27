@@ -1,0 +1,262 @@
+:root {
+    --accent: #ffffb3;
+    --bg: #000000;
+}
+
+body {
+    background-color: var(--bg);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+}
+
+.main-card {
+    width: 350px; 
+    padding: 30px;
+    border: 2px solid var(--accent);
+    position: relative;
+    background: var(--bg);
+}
+
+.pfp-circle {
+    width: 70px;
+    height: 70px;
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+    background: var(--bg);
+    
+    position: absolute;
+    top: -35px;
+    left: -20px;
+    overflow: hidden;
+}
+
+.pfp-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 1.2rem;
+    margin: 10px 0 5px 0;
+    text-transform: lowercase;;
+}
+
+p {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 20px;
+}
+
+.links a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 0.75rem;
+    margin-right: 15px;
+    border: 1px solid var(--accent);
+    padding: 3px 8px;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    background: var(--accent);
+    color: #000;
+}
+
+.floating-corner {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    width: 50px;
+    height: auto;
+    z-index: 100;   
+}
+.inverted {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+.inverted .floating-corner {
+    filter: invert(1) hue-rotate(180deg);
+}
+/* Smooth color transition */
+body {
+    transition: filter 0.5s ease;
+}
+
+.inverted {
+    filter: invert(1) hue-rotate(180deg);
+}
+.inverted .pfp-circle img {
+    filter: invert(1) hue-rotate(180deg);
+}
+.vertical-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#discord-status {
+    width: 350px;
+    padding: 12px 20px;
+    background: #000;
+    border: 1px solid var(--accent);
+    text-transform: uppercase;
+    font-family: 'Courier New', monospace;
+}
+
+.status-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+#status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: #555;
+}
+
+#status-text {
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#activity-detail {
+    font-size: 0.65rem;
+    color: #888;
+    border-left: 1px solid var(--accent);
+    padding-left: 10px;
+}
+
+.center-container {
+    display: flex;
+    flex-direction: column; 
+    
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    gap: 20px;
+}
+#spotify-container {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+    display: none; 
+}
+
+#album-art {
+    width: 50px;
+    height: 50px;
+    border: 1px solid var(--accent);
+}
+
+#song-name {
+    font-size: 0.8rem;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+#artist-name {
+    font-size: 0.65rem;
+    color: #888;
+}
+
+.visualizer {
+    display: flex;
+    align-items: flex-end;
+    gap: 2px;
+    height: 15px;
+    margin-top: 5px;
+}
+
+.bar {
+    width: 3px;
+    background: var(--accent);
+    box-shadow: var(--glow);
+    animation: bounce 1s infinite alternate;
+}
+
+.bar:nth-child(1) { animation-duration: 0.4s; }
+.bar:nth-child(2) { animation-duration: 0.7s; }
+.bar:nth-child(3) { animation-duration: 0.5s; }
+.bar:nth-child(4) { animation-duration: 0.9s; }
+
+@keyframes bounce {
+    from { height: 2px; }
+    to { height: 100%; }
+}
+
+.inverted .pfp-circle img,
+.inverted #album-art,
+.inverted #toggle-trigger {
+    filter: invert(1) hue-rotate(180deg) !important;
+}
+
+.inverted #album-art,
+.inverted .pfp-circle {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+#cat-summoner {
+    background: transparent;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+    font-family: 'Courier New', monospace;
+    font-size: 0.6rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+#cat-summoner:hover {
+    opacity: 1;
+    box-shadow: var(--glow);
+    background: var(--accent);
+    color: #000;
+}
+
+.inverted #cursor-cat {
+    filter: invert(1) hue-rotate(180deg);
+}
+#cat-summoner {
+    background: transparent;
+    border: none;
+    outline: none;
+    
+    color: var(--accent);
+    font-family: 'Courier New', monospace;
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+    align-self: flex-end;
+    margin-top: 5px;
+    padding: 0;
+    
+    transition: all 0.3s ease;
+    opacity: 0.5;
+}
+
+#cat-summoner:hover {
+    opacity: 1;
+    text-shadow: var(--glow);
+}
+
+.inverted #cat-summoner {
+    color: #000;
+    text-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
