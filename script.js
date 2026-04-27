@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     const custom = data.activities.find(a => a.type === 4);
 
                     if (game) {
-                        activityEl.innerText = `DOING: ${game.name}`;
+                        activityEl.innerText = `playing: ${game.name}`;
                     } else if (custom && custom.state) {
 
                         activityEl.innerText = `STATUS: ${custom.state}`;
